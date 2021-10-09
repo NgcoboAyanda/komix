@@ -1,0 +1,32 @@
+/* base css file  */
+
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Roboto Condensed font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* font sizes */
+    --size-normal: 16px;
+    --size-mid:18px;
+    --size-big: 32px;
+    /* font weight */
+    --weight-normal: 400;
+    --weight-mid: 400;
+    --weight-big: 700;
+    /* typefaces */
+    --roboto-normal: 'Roboto', sans-serif;
+    --roboto-bold: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    font-family: var(--roboto-normal);
+}
