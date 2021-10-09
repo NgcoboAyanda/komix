@@ -5,6 +5,7 @@ import logo from '../../Utitilies/logo.png'//Komix logo
 
 //Components
 import MenuButton from '../../Utitilies/MenuButton/MenuButton'
+import SideMenu from './SideMenu/SideMenu'
 
 const Header = ()=>{
     //side menu state
@@ -21,6 +22,7 @@ const Header = ()=>{
                 {/* if menuVisible is true then it will be set to false --- and vice versa */}
                 <MenuButton onClickFunction={()=> setMenuVisible(!menuVisible)}/>
             </div>
+            <SideMenu state={menuVisible} />
         </header>
     )
 }

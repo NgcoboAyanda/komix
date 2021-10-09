@@ -1,0 +1,69 @@
+.side_menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background: white;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.side_menu-button{
+    /* container for MenuButton*/
+    height: 74px;
+    width: 50px;
+}
+
+.side_menu-link-container{
+    /* container for side_menu-link(s) */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.side_menu-link{
+    /* each side menu row */
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: var(--size-mid);
+    cursor: pointer;
+}
+.side_menu-link:hover{
+    background: rgba(0, 140, 255, 0.082);
+}
+.side_menu-link:not(:last-child){
+    margin-bottom: 35px;
+}
+
+.side_menu-link-child{
+    /* direct child of .side_menu_link */ 
+    padding: 0 3%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.side_menu-link-child > img{
+    /* all icons inside side menu link */
+    height: 100%;
+    padding: 3px;
+}
+
+.side_menu-link-label{
+    margin-left: 10px;
+    /* the side menu link that is the label */
+    margin-right: auto;
+}
+
+
+.side_menu-footer{
+    /*container for side_menu-footer */
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(87, 87, 87);
+}
