@@ -27,6 +27,28 @@
     --roboto-bold: 'Roboto Condensed', sans-serif;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     font-family: var(--roboto-normal);
+    height: 100%;
+}
+
+header{
+
+}
+
+main{
+    /* every page */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 65px; /* 65px is the height of the header*/
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.164)),url('./Utitilies/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

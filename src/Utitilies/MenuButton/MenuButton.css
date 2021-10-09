@@ -1,0 +1,12 @@
+.menu_button-container{
+    /* will be assigned height from the parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+.menu_button-container > svg{
+    fill: white;
+    height: 35px;
+}
