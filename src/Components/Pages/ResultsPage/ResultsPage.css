@@ -1,0 +1,10 @@
+.results_page{
+    padding:5px;
+}
+
+.results_page-searchbox{
+    box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.151);
+    position: relative;
+    height: 50px;
+    font-size: var(--size-normal);
+}

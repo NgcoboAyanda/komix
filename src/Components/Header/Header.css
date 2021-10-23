@@ -1,12 +1,13 @@
 .app-header{
-    position: relative; /*because the side menu will be position:absolute*/
+    position: absolute; /*because the side menu will be position:absolute*/
     height: 65px;
+    width: 100%;
     display: flex;
-    box-sizing: content-box;
     padding: 4px 3%;
     justify-content: space-between;
     align-items: center;
     padding-top: 5px;
+    overflow: hidden;
 }
 
 .app-header-child{

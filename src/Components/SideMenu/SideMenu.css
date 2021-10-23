@@ -1,0 +1,141 @@
+.side_menu{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    background: white;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all 0.2s linear;
+}
+.side_menu-open{
+    /* when side menu is open */
+    right: 0;
+}
+.side_menu-closed{
+    /* when side menu is closed */
+    right: -100%;
+}
+
+.side_menu-button{
+    /* container for MenuButton*/
+    height: 74px;
+    width: 50px;
+}
+
+.side_menu-link-container{
+    /* container for side_menu-link(s) */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.side_menu-link{
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--size-mid);
+    transition: background 0.15s linear;
+    display: flex;
+    flex-direction: column;
+}
+.side_menu-link:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.side_menu-link-child-container{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background 0.2s linear;
+}
+.side_menu-link-child-container:active{
+    background: rgba(5, 111, 197, 0.082);
+}
+.side_menu-link-child{
+    /* direct child of .side_menu_link */
+    padding: 0 3%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.side_menu-link-child > img{
+    /* all icons inside side menu link */
+    height: 100%;
+    padding: 3px;
+}
+.side_menu-link-label{
+    margin-left: 1px;
+    /* the side menu link that is the label */
+    margin-right: auto;
+}
+
+/* *8****************************************************************** */
+
+.side_menu-link-submenu{
+    padding: 0 6%;  
+    list-style-type: none;
+    font-size: var(--size-normal); 
+}
+.side_menu-link-submenu-hidden{
+    display: none;
+}
+
+
+/* ******************************************************************* */
+
+.side_menu-footer{
+    /*container for side_menu-footer */
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(87, 87, 87);
+}
+/*
+.side_menu-link{
+    /* each side menu row 
+    width: 100%;
+    height: 60px;
+    padding: 8px 0;
+    display: flex;
+    
+
+.side_menu-link-child{
+    /* direct child of .side_menu_link
+    padding: 0 3%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.side_menu-link-child > img{
+    /* all icons inside side menu link
+    height: 100%;
+    padding: 3px;
+}
+
+.side_menu-link-label{
+    margin-left: 10px;
+    /* the side menu link that is the label
+    margin-right: auto;
+}
+
+.side_menu-link-submenu{
+    /*togglable submenu for side-menu-link 
+    position: absolute;
+}
+
+.side_menu-footer{
+    /*container for side_menu-footer 
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(87, 87, 87);
+}
+*/

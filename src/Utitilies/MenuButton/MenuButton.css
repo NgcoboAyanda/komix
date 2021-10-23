@@ -12,5 +12,6 @@
 
 .menu_button-container > svg{
     fill: currentColor;
+    /* svg will be filled with the current color of the parent component */
     height: 35px;
 }
