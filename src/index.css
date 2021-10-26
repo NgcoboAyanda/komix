@@ -16,6 +16,7 @@
 
 :root{
     /* font sizes */
+    --size-small: 14px;
     --size-normal: 16px;
     --size-mid:18px;
     --size-big: 32px;
@@ -26,6 +27,13 @@
     /* typefaces */
     --roboto-normal: 'Roboto', sans-serif;
     --roboto-bold: 'Roboto Condensed', sans-serif;
+    /* font color */
+    --font-lighter: rgb(218, 218, 218);
+    --font-light: rgb(136, 136, 136);
+    /* theme colors */
+    --color-primary: rgba(206, 43, 43, 0.733);
+    /* background */
+    --bg-main: rgb(241, 241, 241);
 }
 
 html{

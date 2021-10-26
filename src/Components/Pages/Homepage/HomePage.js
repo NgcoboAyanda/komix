@@ -12,7 +12,7 @@ const HomePage = ({menuVisible, setMenuVisible})=>{
     let history = useHistory()
 
     const search = () =>{
-        history.push(`/search?q=${searchTerm}`)
+        history.push(`/search?q=${searchTerm}&category=comics`)
     }
     
     return(
