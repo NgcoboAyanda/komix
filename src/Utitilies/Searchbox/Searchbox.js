@@ -15,7 +15,8 @@ const Searchbox = ({value, onChange}) => {
                 fontSize: 'inherit',
                 paddingLeft: '12px',
                 paddingRight: '50px',
-                border:'none'
+                border:'none',
+                color:'currentColor'
             }}
                 placeholder="search Marvel comics"
             />

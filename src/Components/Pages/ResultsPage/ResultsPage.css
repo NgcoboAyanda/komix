@@ -17,6 +17,7 @@
     position: relative;
     height: 50px;
     font-size: var(--size-normal);
+    color:var(--font-mid);
 }
 
 /* the categories e.g comics, creators etc */
@@ -46,9 +47,77 @@
 }
 
 
-
+/* results_page-content */
 .results_page-content{
+    box-shadow: none;
     padding: 0 15px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
     background: var(--bg-main);
+}
+.results_page-content-searched-term{
+    margin-top: 5px;
+    padding: 15px 10px;
+    background: white;
+    color: var(--font-mid);
+    font-size: var(--size-small);
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.075);
+}
+.results_page-content-searched-term > p > span {
+    margin: 5px;
+    color: var(--color-primary);
+    font-weight: var(--weight-big);
+}
+
+body{
+    margin: 0;
+}
+
+.results_page-content-data{
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.results_page-content-data-item{
+    height: 110px;
+    display: flex;
+    padding: 5px;
+}
+.results_page-content-data-item:not(:last-child){
+    margin-bottom: 5px;
+}
+.results_page-content-data-item:first-child{
+    margin-top: 5px;
+    display: flex;
+}
+
+.results_page-content-data-item-thumbnail{
+    flex: 0 0 87px;
+    
+}
+.results_page-content-data-item-thumbnail > img{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(97, 97, 97);
+}
+
+.results_page-content-data-item-text{
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: var(--font-mid);
+}
+.results_page-content-data-item-text > * {
+    padding: 7px;
+}
+
+.results_page-content-data-item-price {
+    color: var(--font-light);
 }
