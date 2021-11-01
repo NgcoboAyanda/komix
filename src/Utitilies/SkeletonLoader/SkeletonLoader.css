@@ -1,0 +1,91 @@
+:root{
+    --loader-bg:rgb(223, 223, 223);
+}
+
+.results_page-content-loader{
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.results_page-content-loader-item{
+    height: 110px;
+    display: flex;
+    padding: 5px;
+}
+.results_page-content-loader-item:not(:last-child){
+    margin-bottom: 5px;
+}
+.results_page-content-loader-item:first-child{
+    margin-top: 5px;
+    display: flex;
+}
+
+.results_page-content-loader-item-thumbnail{
+    flex: 0 0 87px;
+    background-color: var(--loader-bg);
+    position: relative;
+    overflow-x: hidden;
+}
+.results_page-content-loader-item-thumbnail::after{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(to right,var(--loader-bg),rgb(238, 238, 238),var(--loader-bg));
+        animation: shimmer 1.3s infinite;
+        content: '';
+}
+
+
+.results_page-content-loader-item-text{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: var(--font-mid);
+}
+.results_page-content-loader-item-text > * {
+    height: 28px;
+    position: relative;
+    overflow-x: hidden;
+}
+.results_page-content-loader-item-text > *::after{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(to right,var(--loader-bg),rgb(238, 238, 238),var(--loader-bg));
+    animation: shimmer 1.3s infinite;
+    content: '';
+}
+
+
+.results_page-content-loader-item-text-title{
+    width: 300.7px;
+    color: var(--loader-bg);
+    background-color: currentColor;
+    text-decoration: none;
+}
+
+.results_page-content-loader-item-price {
+    background-color: var(--loader-bg);
+    width: 80px;
+}
+
+/* Shimmer animation for skeleton loader */
+@keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }

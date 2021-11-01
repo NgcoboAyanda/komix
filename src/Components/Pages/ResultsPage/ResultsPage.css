@@ -27,7 +27,7 @@
     padding-bottom: 5px;
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    padding-left: 20px;
     border-bottom: 1px solid var(--font-lighter);
 }
 .results_page-category{
@@ -104,7 +104,6 @@ body{
 .results_page-content-data-item-thumbnail > img{
     height: 100%;
     width: 100%;
-    background-color: rgb(97, 97, 97);
 }
 
 .results_page-content-data-item-text{
@@ -116,6 +115,13 @@ body{
 }
 .results_page-content-data-item-text > * {
     padding: 7px;
+}
+.results_page-content-data-item-text-title{
+    color: inherit;
+    text-decoration: none;
+}
+.results_page-content-data-item-text:hover{
+    color: var(--color-primary);
 }
 
 .results_page-content-data-item-price {

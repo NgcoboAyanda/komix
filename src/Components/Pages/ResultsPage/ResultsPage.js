@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import { Link, NavLink, useHistory } from 'react-router-dom'
 import { Router, withRouter } from 'react-router'
 
 import Searchbox from '../../../Utitilies/Searchbox/Searchbox'
 
-
 import './ResultsPage.css'
 import MarvelAPI from './MarvelAPI'
+import SkeletonLoader from '../../../Utitilies/SkeletonLoader/SkeletonLoader'
 
+
+/* Results Page component */
 const ResultsPage = (props)=>{
     const[searchTerm, setSearchTerm] = useState('')
     const[searchedTerm, setSearchedTerm] = useState('')
@@ -17,23 +19,47 @@ const ResultsPage = (props)=>{
 
     let history = useHistory()
 
-    const search = e =>{
-        setLoading(true)
-        searchComics()
+    const searchQuery = props.location.search
+
+    const search = (e,term) =>{
+        history.push(`/search?q=${term}`)
         e.preventDefault()
     }
+
+    const searchComics = async term => {
+        let theData = await MarvelAPI.getComics(term)
+        setData(theData)
+    }
+
+    useEffect(
+        ()=>{
+            //when searchQuery changes
+            setLoading(true)
+            let params = new URLSearchParams(props.location.search)
+            let term = params.get('q')
+            setSearchTerm(term)
+            setSearchedTerm(term)
+            searchComics(term)
+        },
+        [searchQuery]
+    )
 
     useEffect(
         /* if data changes */
         ()=>{
-            if(data.code === 200){
-                setLoading(false)
-                setSearchedTerm(searchTerm)
+            try{
+                if(data.code === 200){
+                    setLoading(false)
+                    setSearchedTerm(searchTerm)
+                }
+            }
+            catch{
             }
         },
         [data]
     )
 
+    /*
     useEffect(
         //when component mounts
         async ()=>{
@@ -41,25 +67,10 @@ const ResultsPage = (props)=>{
             let term = params.get('q')
             setSearchTerm(term)
             setSearchedTerm(term)
-            let theData = await MarvelAPI.getComics(term, ()=>setLoading(false))
-            setData(theData)
+            searchComics(term)
         },
         []
-    )
-
-    useEffect(
-        //each time we change the category
-        ()=>{
-            let params = new URLSearchParams(props.location.search)
-            setCategory(params.get('category'))
-        },
-        [props.location.search]
-    )
-
-    const searchComics = async () => {
-        let theData = await MarvelAPI.getComics(searchTerm)
-        setData(theData)
-    }
+    ) */
 
     const renderCurrentCategory = name => {
         /* will return 'results_page-category-selected' if name === category (state property)*/
@@ -68,39 +79,23 @@ const ResultsPage = (props)=>{
     }
 
     const renderData = ()=> {
-        /*
-        if(data && data.code === 200){
-            const {data:{results}} = data
-            return(
-                <ul className="results_page-content-data" >{
-                    <li>aaaaaaaaaaaaaa</li>
-                }
-                </ul>
-            )
-        }
-        */
+        /* renders the comics */
        const {data:{results}} = data
-       /*
-       return results.map(item=>{
-           return(
-               <li>{item.title}</li>
-           )
-       })*/
        let mapResults = ()=>{
            return results.map(item=>{
                return (
-                    <li className="results_page-content-data-item">
-                        <li className="results_page-content-data-item-thumbnail">
+                    <li className="results_page-content-data-item" key={item.id}>
+                        <div className="results_page-content-data-item-thumbnail">
                             <img src={`${item.thumbnail.path}.jpg`} alt="" />
-                        </li>
-                        <li className="results_page-content-data-item-text">
-                            <span className="results_page-content-data-item-text-title">
+                        </div>
+                        <div className="results_page-content-data-item-text">
+                            <Link className="results_page-content-data-item-text-title" to={`/komix-build/comic/${item.id}`}>
                                 {item.title}
-                            </span>
+                            </Link>
                             <span className="results_page-content-data-item-price">
                                 ${item.prices[0].price}
                             </span>
-                        </li> 
+                        </div> 
                     </li>
                )
            })
@@ -112,10 +107,23 @@ const ResultsPage = (props)=>{
        )
     }
 
+    const renderLoaders=()=>{
+        return(
+            <div className="results_page-content-loader">
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+            </div>
+        )
+    }
+
     const renderResults = () =>{
         if(loading){
             //if the page is still loading
-            return <div>we are loading lil bitch</div>
+            return renderLoaders()
         }
         else if(!loading & data.code === 200){
             //if the page is not loading
@@ -126,7 +134,7 @@ const ResultsPage = (props)=>{
 
     return(
         <div className="results_page">
-            <form className="results_page-searchbox" onSubmit={e=>search(e)}>
+            <form className="results_page-searchbox" onSubmit={e=>search(e, searchTerm)}>
                 <Searchbox value={searchTerm} onChange={setSearchTerm}/>
             </form>
             <ul className="results_page-categories">
@@ -137,12 +145,13 @@ const ResultsPage = (props)=>{
                         All
                     </NavLink>
                 </li> */}
-                <li className={`results_page-category ${renderCurrentCategory('comics')}`}>
+                <li className="results_page-category results_page-category-selected">
                     <NavLink 
-                        to={`/search?q=${searchTerm}&category=comics`}>
+                        to={`/search?q=${searchTerm}`}>
                         Comics
                     </NavLink>
                 </li>
+                {/*
                 <li className={`results_page-category ${renderCurrentCategory('characters')}`}>
                     <NavLink 
                         to={`/search?q=${searchTerm}&category=characters`}>
@@ -155,6 +164,7 @@ const ResultsPage = (props)=>{
                         Creators
                     </NavLink>
                 </li>
+                */}
             </ul>
             <div className="results_page-content">
                 <div className="results_page-content-searched-term">
@@ -163,13 +173,13 @@ const ResultsPage = (props)=>{
                         <span className="results_page-content-searched-term-name">
                             {searchedTerm}
                         </span>
-                        in 
+                        {/* in
                         <span className="results_page-content-searched-term-category">
                             {category}
-                        </span>
+                        </span> */}
                     </p>
                 </div>
-                {renderResults(                                                                                                                                  )}
+                {renderResults()}
             </div>
             {/*
             
