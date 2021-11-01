@@ -5,7 +5,9 @@
     <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">
       let path = window.location.pathname
+      let params = window.location.search
       localStorage.setItem('komix_fwd_path', path)
+      localStorage.setItem('komix_fwd_params', params)
       window.location.assign('https://ngcoboayanda.github.io/komix')
     </script>
   </head>
