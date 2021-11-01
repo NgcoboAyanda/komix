@@ -89,7 +89,7 @@ const ResultsPage = (props)=>{
                             <img src={`${item.thumbnail.path}.jpg`} alt="" />
                         </div>
                         <div className="results_page-content-data-item-text">
-                            <Link className="results_page-content-data-item-text-title" to={`zz/comic/${item.id}`}>
+                            <Link className="results_page-content-data-item-text-title" to={`/comic/${item.id}`}>
                                 {item.title}
                             </Link>
                             <span className="results_page-content-data-item-price">

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {
     BrowserRouter as Router,
     Route,
@@ -12,6 +12,12 @@ import ResultsPage from './Pages/ResultsPage/ResultsPage'
 
 
 const App = () =>{
+    useEffect(
+        ()=>{
+            console.log(process.env.PUBLIC_URL)
+        }
+        ,[]
+    )
 
     return(
         <div className="app-container">
