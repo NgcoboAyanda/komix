@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">
-      let params = new URLSearchParams(window.location.search)
-      let searchTerm = params.get('q')
-      if(searchTerm){
-        //searchTerm is in the url
-        window.searchTerm = searchTerm
-        console.log(window.searchTerm)
+      let path = window.location.pathname
+      if(path==='/komix/search'){
+        //if url is going to search page
+        let params = new URLSearchParams(window.location.search)
+        let searchTerm = params.get('q')
+        if(searchTerm){
+          //searchTerm is in the url
+          window.searchTerm = searchTerm
+          window.location.href('https://ngcoboayanda.github.io/komix/')
+        }
       }
     </script>
   </head>
