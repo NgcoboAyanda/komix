@@ -4,7 +4,7 @@
 
 .results_page-content-loader{
     margin-top: 20px;
-    background-color: white;
+    background-color: red;
     width: 100%;
     flex: 1;
     display: flex;
