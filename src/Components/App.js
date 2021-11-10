@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css'//CSS file
+import ComicPage from './Pages/ComicPage/ComicPage'
 
 import HomePage from './Pages/Homepage/HomePage'
 import ResultsPage from './Pages/ResultsPage/ResultsPage'
@@ -14,7 +15,7 @@ import ResultsPage from './Pages/ResultsPage/ResultsPage'
 const App = () =>{
     useEffect(
         ()=>{
-            console.log(process.env.PUBLIC_URL)
+            console.log('booted up')
         }
         ,[]
     )
@@ -27,6 +28,7 @@ const App = () =>{
                 <Switch>
                     <Route exact path="/" component={HomePage}/>
                     <Route exact path="/search" component={ResultsPage}/>
+                    <Route exact path="/comic/:id" component={ComicPage} />
                 </Switch> 
             </Router>
             

@@ -7,6 +7,8 @@ import Searchbox from '../../../Utitilies/Searchbox/Searchbox'
 import './ResultsPage.css'
 import MarvelAPI from './MarvelAPI'
 import SkeletonLoader from '../../../Utitilies/SkeletonLoader/SkeletonLoader'
+import Header from '../../Header/Header'
+import SideMenu from '../../SideMenu/SideMenu'
 
 
 /* Results Page component */
@@ -16,6 +18,7 @@ const ResultsPage = (props)=>{
     const[category, setCategory] = useState('comic')
     const[loading, setLoading] = useState(true)
     const[data, setData] = useState({})
+    const[menuVisible, setMenuVisible] = useState(false)
 
     let history = useHistory()
 
@@ -134,6 +137,15 @@ const ResultsPage = (props)=>{
 
     return(
         <div className="results_page">
+            <SideMenu
+                visible={menuVisible}
+                toggleVisible={()=>setMenuVisible(!menuVisible)}
+            />
+            <Header
+                menuVisible={menuVisible}
+                setMenuVisible={setMenuVisible}
+                color='var(--color-primary-dark)'
+            />
             <form className="results_page-searchbox" onSubmit={e=>search(e, searchTerm)}>
                 <Searchbox value={searchTerm} onChange={setSearchTerm}/>
             </form>

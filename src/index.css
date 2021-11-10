@@ -33,6 +33,7 @@
     --font-mid: rgb(109, 109, 109);
     /* theme colors */
     --color-primary: rgba(206, 43, 43, 0.733);
+    --color-primary-dark: rgba(116, 17, 17, 0.733);
     /* background */
     --bg-main: rgb(241, 241, 241);
 }

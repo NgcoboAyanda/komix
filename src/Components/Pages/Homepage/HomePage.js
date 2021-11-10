@@ -11,6 +11,18 @@ const HomePage = ()=>{
     const[searchTerm, setSearchTerm] = useState('')
     const[menuVisible, setMenuVisible] = useState(false)
 
+    useEffect(
+        ()=>{
+            let path = localStorage.getItem('komix_fwd_path')
+            if(path === '/komix/search'){
+                let params = localStorage.getItem('komix_fwd_params')
+                //if url is /komix/search
+                history.push(`/search${params}`)
+                console.log(params)
+            }
+        }, []
+    )
+
     const toggleMenuVisibility = ()=>{
         setMenuVisible(!menuVisible)
     }

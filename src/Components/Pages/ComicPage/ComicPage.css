@@ -1,0 +1,4 @@
+.comic_page{
+    background-color: var(--bg-main);
+    min-height: 100vh;
+}
