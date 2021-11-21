@@ -130,3 +130,13 @@ body{
 .results_page-content-data-item-price {
     color: var(--font-light);
 }
+
+
+.results_page-content-error{
+    margin-top: 20px;
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

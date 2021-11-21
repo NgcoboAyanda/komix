@@ -1,0 +1,27 @@
+.network_error{
+    display: flex;
+    flex-direction: column;
+}
+
+.network_error-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.network_error-information{
+    color: var(--font-mid);
+    font-size: var(--size-normal);
+}
+
+.network_error-action-btn{
+    cursor: pointer;
+    color: var(--font-mid);
+    text-decoration: underline;
+    font-size: var(--size-normal);
+    background-color: transparent;
+    border: none;
+}
+.network_error-action-btn:hover{
+    color: var(--color-primary) ;
+}
+

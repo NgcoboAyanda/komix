@@ -7,11 +7,14 @@ export default (()=>{
         let baseURL = 'https://gateway.marvel.com/'
         let res = await fetch(`${baseURL}/v1/public/comics?titleStartsWith=${title}&apikey=${apiKey}`)
         .then(resp => resp)
-        .catch(err => console.log(err))
-        if(res.status === 200){
-            let data = await res.json()
-            return data
+        .catch(err => err)
+        try{
+            if(res.status === 200){
+                let data = await res.json()
+                return data
+            }
         }
+        catch{}
     }
 
     return {

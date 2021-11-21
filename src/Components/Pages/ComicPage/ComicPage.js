@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import Header from '../../Header/Header'
+import SideMenu from '../../SideMenu/SideMenu'
 
 import './ComicPage.css'
 
 const ComicPage = (props) =>{
     const[comicID, setComicID] = useState('')
+    const[menuVisible, setMenuVisible] = useState(false)
     const[loading, setLoading] = useState(true)
 
     useEffect(
@@ -30,7 +33,15 @@ const ComicPage = (props) =>{
 
     return(
         <div className="comic_page">
-            this is the comic page
+            <SideMenu
+                visible={menuVisible}
+                toggleVisible={()=>setMenuVisible(!menuVisible)}
+            />
+            <Header
+                menuVisible={menuVisible}
+                setMenuVisible={setMenuVisible}
+                color='var(--color-primary-dark)'
+            />
         </div>
     )
 }

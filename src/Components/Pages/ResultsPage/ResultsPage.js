@@ -9,6 +9,7 @@ import MarvelAPI from './MarvelAPI'
 import SkeletonLoader from '../../../Utitilies/SkeletonLoader/SkeletonLoader'
 import Header from '../../Header/Header'
 import SideMenu from '../../SideMenu/SideMenu'
+import NetworkError from '../../../Utitilies/NetworkError/NetworkError'
 
 
 /* Results Page component */
@@ -17,6 +18,7 @@ const ResultsPage = (props)=>{
     const[searchedTerm, setSearchedTerm] = useState('')
     const[category, setCategory] = useState('comic')
     const[loading, setLoading] = useState(true)
+    const[error, setError] = useState(false)
     const[data, setData] = useState({})
     const[menuVisible, setMenuVisible] = useState(false)
 
@@ -30,8 +32,15 @@ const ResultsPage = (props)=>{
     }
 
     const searchComics = async term => {
+        setError(false)
+        setLoading(true)
         let theData = await MarvelAPI.getComics(term)
-        setData(theData)
+        if(theData){
+            setData(theData)
+        }
+        else{
+            setError(true)
+        }
     }
 
     useEffect(
@@ -50,13 +59,15 @@ const ResultsPage = (props)=>{
     useEffect(
         /* if data changes */
         ()=>{
-            try{
+            if(data!==undefined){
                 if(data.code === 200){
+                    setError(false)
                     setLoading(false)
                     setSearchedTerm(searchTerm)
                 }
             }
-            catch{
+            else{
+                setError(true)
             }
         },
         [data]
@@ -123,15 +134,28 @@ const ResultsPage = (props)=>{
         )
     }
 
+    const renderNetworkError = () =>{
+        return (
+            <div className="results_page-content-error">
+                <NetworkError repeatRequest={()=>searchComics(searchTerm)}/>
+            </div>
+        )
+    }
+
     const renderResults = () =>{
-        if(loading){
-            //if the page is still loading
-            return renderLoaders()
+        if(!error){
+            if(loading){
+                //if the page is still loading
+                return renderLoaders()
+            }
+            else if(!loading & data.code === 200){
+                //if the page is not loading
+                //this means the api call is complete
+                return renderData()
+            }
         }
-        else if(!loading & data.code === 200){
-            //if the page is not loading
-            //this means the api call is complete
-            return renderData()
+        else{
+            return renderNetworkError()
         }
     }
 
