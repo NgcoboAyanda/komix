@@ -31,7 +31,7 @@ const Header = ({menuVisible, setMenuVisible, color='white'})=>{
     
     const handleScroll = debounce (() => {
         const currentScrollPos = window.pageYOffset
-        setHeaderVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+        setHeaderVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 50);
         setPrevScrollPos(currentScrollPos);
     }, 100)
 
@@ -49,9 +49,9 @@ const Header = ({menuVisible, setMenuVisible, color='white'})=>{
                 {/* Red Komix logo */}
                 <img src={logo} alt="" />
             </div>
-            <div className="app-header-child app-header-hamburger" style={{color}}>
+            <div className="app-header-child app-header-hamburger">
                 {/* if menuVisible is true then it will be set to false --- and vice versa */}
-                <MenuButton onClickFunction={()=> setMenuVisible(!menuVisible)}/>
+                <MenuButton onClickFunction={()=> setMenuVisible(!menuVisible)} color={color}/>
             </div>
         </header>
     )

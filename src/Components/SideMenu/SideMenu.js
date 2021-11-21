@@ -71,7 +71,10 @@ const SideMenu = ({visible, toggleVisible}) =>{
         <div className={`side_menu ${renderSideMenuClass()}`}>
             {/* the top button */}
             <div className="side_menu-button">
-                <MenuButton onClickFunction={toggleVisible}/>
+                <MenuButton 
+                    onClickFunction={toggleVisible}
+                    color='var(--font-mid)'    
+                />
             </div>
             
             {/* the middle links */}

@@ -16,7 +16,6 @@
 
 /* results_page-searchbox */
 .results_page-searchbox{
-    margin-top: 65px;
     position: relative;
     height: 50px;
     font-size: var(--size-normal);

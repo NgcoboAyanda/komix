@@ -3,3 +3,7 @@
     overflow: hidden;
     min-height: 100vh;
 }
+
+.app-container > div {
+    padding-top: 65px;
+}

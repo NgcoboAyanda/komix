@@ -38,6 +38,7 @@
     min-height: 60px;
     display: flex;
     flex-direction: column;
+    color: var(--font-mid);
     font-size: var(--size-mid);
     transition: background 0.15s linear;
     display: flex;

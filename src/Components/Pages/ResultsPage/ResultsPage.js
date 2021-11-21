@@ -5,7 +5,7 @@ import { Router, withRouter } from 'react-router'
 import Searchbox from '../../../Utitilies/Searchbox/Searchbox'
 
 import './ResultsPage.css'
-import MarvelAPI from './MarvelAPI'
+import MarvelAPI from '../../../Utitilies/MarvelAPI/MarvelAPI'
 import SkeletonLoader from '../../../Utitilies/SkeletonLoader/SkeletonLoader'
 import Header from '../../Header/Header'
 import SideMenu from '../../SideMenu/SideMenu'
