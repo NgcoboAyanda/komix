@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/komix/static/css/main.b87d554d.chunk.css",
+    "main.css": "/komix/static/css/main.ed4aef06.chunk.css",
     "main.js": "/komix/static/js/main.4f1301e6.chunk.js",
     "main.js.map": "/komix/static/js/main.4f1301e6.chunk.js.map",
     "runtime-main.js": "/komix/static/js/runtime-main.75ad6450.js",
@@ -8,14 +8,14 @@
     "static/js/2.10e9b1b8.chunk.js": "/komix/static/js/2.10e9b1b8.chunk.js",
     "static/js/2.10e9b1b8.chunk.js.map": "/komix/static/js/2.10e9b1b8.chunk.js.map",
     "index.html": "/komix/index.html",
-    "static/css/main.b87d554d.chunk.css.map": "/komix/static/css/main.b87d554d.chunk.css.map",
+    "static/css/main.ed4aef06.chunk.css.map": "/komix/static/css/main.ed4aef06.chunk.css.map",
     "static/js/2.10e9b1b8.chunk.js.LICENSE.txt": "/komix/static/js/2.10e9b1b8.chunk.js.LICENSE.txt",
     "static/media/index.css": "/komix/static/media/background.1920d37a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.75ad6450.js",
     "static/js/2.10e9b1b8.chunk.js",
-    "static/css/main.b87d554d.chunk.css",
+    "static/css/main.ed4aef06.chunk.css",
     "static/js/main.4f1301e6.chunk.js"
   ]
 }
