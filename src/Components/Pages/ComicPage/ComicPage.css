@@ -10,14 +10,16 @@
 }
 .comic_page-content-poster{
     position: relative;
-    height: 250px;
+    height: 280px;
     width: 100%;
     overflow:hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-size: cover;
+    background-position-y:center;
+    background-repeat: no-repeat;
 }
-.comic_page-content-poster > img{
+.comic_page-content-poster > div{
+    background: rgba(59, 59, 59, 0.123);
+    height: 100%;
     width: 100%;
 }
 

@@ -53,6 +53,9 @@ const ComicPage = (props) =>{
         [comicID]
     )
 
+    //poster path and extension
+    const {thumbnail:{path,extension}} = comic
+
     return(
         <div className="comic_page">
             <SideMenu
@@ -65,8 +68,8 @@ const ComicPage = (props) =>{
                 color='var(--color-primary-dark)'
             />
             <div className="comic_page-content">
-                <div className="comic_page-content-poster">
-                    <img src={comic.thumbnail.path+'/landscape_incredible'+'.'+comic.thumbnail.extension}/>
+                <div className="comic_page-content-poster" style={{backgroundImage: `url(${path}/landscape_incredible.${extension})`}}>
+                    <div></div>
                 </div>
             </div>
         </div>
