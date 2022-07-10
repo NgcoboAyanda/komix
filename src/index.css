@@ -14,12 +14,17 @@
     outline: none;
 }
 
+button {
+    border: none;
+}
+
 :root{
     /* font sizes */
     --size-small: 14px;
     --size-normal: 16px;
     --size-mid:18px;
-    --size-big: 32px;
+    --size-big: 24px;
+    --size-extreme: 28px;
     /* font weight */
     --weight-normal: 400;
     --weight-mid: 400;
@@ -33,9 +38,15 @@
     --font-mid: rgb(109, 109, 109);
     /* theme colors */
     --color-primary: rgba(206, 43, 43, 0.733);
+    --color-primary-mid: rgb(170, 12, 12);
     --color-primary-dark: rgba(116, 17, 17, 0.733);
+    --color-primary-darker: rgba(26, 0, 0, 0.973);
     /* background */
     --bg-main: rgb(241, 241, 241);
+
+    /*padding*/
+    --padding-hori-mobile: 10px;
+    --padding-vert-mobile:12px;
 }
 
 html{

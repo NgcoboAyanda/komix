@@ -67,9 +67,35 @@ const ComicPage = (props) =>{
                 setMenuVisible={setMenuVisible}
                 color='var(--color-primary-dark)'
             />
+
             <div className="comic_page-content">
-                <div className="comic_page-content-poster" style={{backgroundImage: `url(${path}/landscape_incredible.${extension})`}}>
+                <div className="comic_page-content-poster" style={{backgroundImage: `linear-gradient(to top, black, rgba(0,0,0,0.3)),url(${path}.${extension})`}}>
                     <div></div>
+                </div>
+                <div className="comic_page-content-poster-small">
+                    <img src={`${path}.${extension}`} alt="" srcset="" />
+                </div>
+            </div>
+
+            <div className="comic_page-information">
+                <div className="comic_page-information-space">
+                    
+                </div>
+                <h2 className="comic_page-information-title">
+                    {`${comic.title}`}
+                </h2>
+                <div className="comic_page-information-details">
+                    <div className="comic_page-information-details-figures">
+                        <span className="pages">
+                            Pages
+                        </span>
+                        <span className="price">Price</span>
+                    </div>
+                    <div className="comic_page-information-details-link">
+                        <button >
+                            View On Marvel Website
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

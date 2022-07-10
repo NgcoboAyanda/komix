@@ -1,20 +1,24 @@
 .comic_page{
     background-color: var(--bg-main);
+    background-color: white;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* padding: 0 15px; */
 
+/* Comic_page-content */
 .comic_page-content{
-
+    position: relative;
 }
 .comic_page-content-poster{
     position: relative;
-    height: 280px;
+    height: 300px;
     width: 100%;
     overflow:hidden;
+    background-position: left center;
     background-size: cover;
-    background-position-y:center;
     background-repeat: no-repeat;
 }
 .comic_page-content-poster > div{
@@ -22,4 +26,71 @@
     height: 100%;
     width: 100%;
 }
+.comic_page-content-poster-small{
+    background-color: transparent;
+    height: 220px;
+    width: 170px;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.comic_page-content-poster-small > img{
+    height: 100%;
+    border-radius: 2px;
+}
 
+/* Comic_page-information */
+.comic_page-information{
+ /*background: red; */
+ flex: 1;  
+}
+.comic_page-information > * {
+    /* padding: 0 var(--padding-hori-mobile); */
+}
+
+.comic_page-information-space{
+    height: 60px;
+    width: 100%;
+    /*background-color: red; */
+}
+.comic_page-information-title{
+    font-size: var(--size-extreme);
+    font-family: var(--roboto-bold);
+    color: var(--color-primary-darker);
+    padding: 20px var(--padding-hori-mobile);
+    border-bottom: 1px solid var(--font-lighter);
+}
+
+.comic_page-information-details{
+    display: flex;
+    flex-direction: column;
+}
+.comic_page-information-details > * {
+    font-size: var(--size-mid);
+}
+
+.comic_page-information-details-figures{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: green; */
+    padding: var(--padding-vert-mobile) var(--padding-hori-mobile);
+}
+
+.comic_page-information-details-link{
+    padding: 0 var(--padding-hori-mobile);
+}
+.comic_page-information-details-link > button {
+    width: 100%;
+    height: 100%;
+    font-size: var(--size-mid);
+    color: var(--font-lighter);
+    font-weight: var(--weight-big);
+    font-family: var(--roboto-normal);
+    padding: var(--padding-vert-mobile) 0;
+    text-align: center;
+    background-color: var(--color-primary-mid);
+}
