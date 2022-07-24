@@ -100,7 +100,7 @@ const ResultsPage = (props)=>{
                return (
                     <li className="results_page-content-data-item" key={item.id}>
                         <div className="results_page-content-data-item-thumbnail">
-                            <img src={`${item.thumbnail.path}.jpg`} alt="" />
+                            <img src={`${item.thumbnail.path}.jpg`} alt="" loading='lazy' />
                         </div>
                         <div className="results_page-content-data-item-text">
                             <Link className="results_page-content-data-item-text-title" to={`/comic/${item.id}`}>

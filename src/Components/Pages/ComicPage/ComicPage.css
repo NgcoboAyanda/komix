@@ -27,9 +27,9 @@
     width: 100%;
 }
 .comic_page-content-poster-small{
-    background-color: transparent;
+    background-color: var(--bg-main);
     height: 220px;
-    width: 170px;
+    width: 142px;
     position: absolute;
     top: 140px;
     left: 50%;
@@ -63,6 +63,9 @@
     color: var(--color-primary-darker);
     padding: 20px var(--padding-hori-mobile);
     border-bottom: 1px solid var(--font-lighter);
+}
+.comic_page-information-title > .loader{
+    width: 350px;
 }
 
 .comic_page-information-details{
@@ -99,9 +102,8 @@
     padding-right: var(--padding-hori-mobile);
 }
 .comic_page-information-details-figures-price > .price-key {
-    font-weight: var(--weight-mid);
     letter-spacing: 2px;
-    color: var(--font-dark);
+    color: var(--font-mid);
 }
 .comic_page-information-details-figures-price > .price-value{
     font-family: var(--roboto-bold);
@@ -138,6 +140,9 @@
     font-size: var(--size-mid);
     letter-spacing: 1px;
 }
+.comic_page-information-description > .description {
+    padding: var(--padding-vert-mobile-big);
+}
 
 /* creators */
 .comic_page-information-creators{
@@ -165,4 +170,38 @@
 }
 .comic_page-information-creators-data-creator:not(:last-child){
     border-bottom: 1px solid var(--font-lighter);
+}
+
+/* Share button */
+.comic_page-sharebtn{
+    background-color: var(--bg-dark);
+    height: 43px;
+    padding: 0 var(--padding-hori-mobile);
+}
+
+.comic_page-sharebtn > .share{
+    cursor: pointer;
+    font-family: var(--roboto);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary-mid);
+    font-size: var(--size-mid);
+    font-weight: var(--weight-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.comic_page-sharebtn > .share:active{
+    transform: scale(0.99);
+}
+
+.comic_page-sharebtn > .share > .share-label {
+    color: var(--font-lighter);
+    font-weight: var(--weight-mid);
+}
+.comic_page-sharebtn > .share > .share-icon {
+    fill: var(--font-lighter);
+    margin-left: 10px;
 }

@@ -23,6 +23,7 @@ button {
     --size-small: 14px;
     --size-normal: 16px;
     --size-mid:18px;
+    --size-mid2:21px;
     --size-big: 24px;
     --size-extreme: 28px;
     /* font weight */
@@ -72,4 +73,36 @@ main{
     background: linear-gradient(to bottom,rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.301)),url('./Utitilies/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.loader-container{
+    width: 100%;
+}
+
+.loader{
+    min-width: 200px;
+    border-radius: 2px;
+    height: 30px;
+    background-color: var(--bg-dark);
+    position: relative;
+    overflow: visible;
+}
+.loader::after{
+    position: absolute;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.719), transparent);
+    display: inline-block;
+    animation: shine 2s infinite;
+    content: '';
+}
+@keyframes shine {
+    100% {
+      transform: translateX(300%);
+    }
+  }
+
+.loader:not(:first-child){
+    margin-top: 10px;
 }
