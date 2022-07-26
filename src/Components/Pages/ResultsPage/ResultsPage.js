@@ -22,6 +22,8 @@ const ResultsPage = (props)=>{
     const[data, setData] = useState({})
     const[menuVisible, setMenuVisible] = useState(false)
 
+    const[scrollPosition, setScrollPosition] = useState('0')
+
     let history = useHistory()
 
     const searchQuery = props.location.search
@@ -98,12 +100,14 @@ const ResultsPage = (props)=>{
        let mapResults = ()=>{
            return results.map(item=>{
                return (
-                    <li className="results_page-content-data-item" key={item.id}>
+                    <li className="results_page-content-data-item" key={item.id} id={item.id}>
                         <div className="results_page-content-data-item-thumbnail">
                             <img src={`${item.thumbnail.path}.jpg`} alt="" loading='lazy' />
                         </div>
                         <div className="results_page-content-data-item-text">
-                            <Link className="results_page-content-data-item-text-title" to={`/comic/${item.id}`}>
+                            <Link className="results_page-content-data-item-text-title" to={{
+                                pathname:`/comic/${item.id}`, state:`${item.id}`
+                            }}>
                                 {item.title}
                             </Link>
                             <span className="results_page-content-data-item-price">
@@ -124,6 +128,7 @@ const ResultsPage = (props)=>{
     const renderLoaders=()=>{
         return(
             <div className="results_page-content-loader">
+                <SkeletonLoader/>
                 <SkeletonLoader/>
                 <SkeletonLoader/>
                 <SkeletonLoader/>
@@ -160,7 +165,7 @@ const ResultsPage = (props)=>{
     }
 
     return(
-        <div className="results_page">
+        <div className="results_page"  >
             <SideMenu
                 visible={menuVisible}
                 toggleVisible={()=>setMenuVisible(!menuVisible)}
