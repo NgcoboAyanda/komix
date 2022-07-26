@@ -89,7 +89,7 @@
     padding-left: var(--padding-hori-mobile);
 }
 .comic_page-information-details-figures-pages > .pages-key {
-    font-weight: var(--weight-mid);
+    color: var(--font-mid);
     letter-spacing: 2px;
 }
 .comic_page-information-details-figures-pages > .pages-value {

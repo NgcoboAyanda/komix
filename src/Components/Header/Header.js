@@ -5,6 +5,8 @@ import logo from '../../Utitilies/logo.png'//Komix logo
 
 //Components
 import MenuButton from '../../Utitilies/MenuButton/MenuButton'
+import HomePage from '../Pages/Homepage/HomePage'
+import { Link } from 'react-router-dom'
 
 
 const debounce = (func, wait, immediate)=> {
@@ -41,14 +43,13 @@ const Header = ({menuVisible, setMenuVisible, color='white'})=>{
             return () => window.removeEventListener('scroll', handleScroll);
         },
         [prevScrollPos, headerVisible, handleScroll]
-    )
+    ) 
     
     return(
         <header className="app-header" style={{top: headerVisible?'0':'-65px'}}>
-            <div className="app-header-child app-header-logo">
-                {/* Red Komix logo */}
+            <Link to="/" className="app-header-child app-header-logo">
                 <img src={logo} alt="" />
-            </div>
+            </Link>
             <div className="app-header-child app-header-hamburger">
                 {/* if menuVisible is true then it will be set to false --- and vice versa */}
                 <MenuButton onClickFunction={()=> setMenuVisible(!menuVisible)} color={color}/>

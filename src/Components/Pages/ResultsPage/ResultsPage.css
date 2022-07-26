@@ -37,6 +37,8 @@
 }
 .results_page-category > a{
     font-weight: var(--weight-mid);
+    font-family: var(--roboto-bold);
+    font-size: var(--size-mid);
     color: inherit;
     text-decoration: none;
 }
@@ -46,6 +48,9 @@
 .results_page-category-selected{
     color: var(--color-primary);
     border-bottom: 3px solid var(--color-primary);
+}
+.results_page-category-selected > a {
+    font-weight: var(--weight-big);
 }
 
 
@@ -100,7 +105,7 @@ body{
 }
 
 .results_page-content-data-item-thumbnail{
-    flex: 0 0 87px;
+    flex: 0 0 74px;
     background-color: var(--bg-main);
 }
 .results_page-content-data-item-thumbnail > img{

@@ -20,7 +20,7 @@ export default (()=>{
         let comic = getFromSessionStorage(comicId)
         if(comic!== null){
             //comics exists on session storage
-            return comic
+            return comic //we return comic
         }
         else{
             //comic doesnt exist on session storage so we make an api request to the api
@@ -45,14 +45,16 @@ export default (()=>{
 
     //searching many comics
     const getComics = async title =>{
+        //SAVING SEARCH RESULTS TO SESSION STORAGE -- DISABLED
         //retrieving search results in session storage
+        /*
         const comics = getFromSessionStorage(title)
         if(comics !== null){
             return comics
         }
         else{
             //if we have no cached search result
-            let res = await fetch(`${baseURL}/v1/public/comics?titleStartsWith=${title}&apikey=${apiKey}`)
+            let res = await fetch(`${baseURL}/v1/public/comics?titleStartsWith=${title}&orderBy=title&limit=100&apikey=${apiKey}`)
             .then(resp => resp)
             .catch(err => err)
             try{
@@ -63,7 +65,18 @@ export default (()=>{
                 }
             }
             catch{ return null }
-        }
+        } */
+        let res = await fetch(`${baseURL}/v1/public/comics?titleStartsWith=${title}&orderBy=title&limit=100&apikey=${apiKey}`)
+            .then(resp => resp)
+            .catch(err => err)
+            try{
+                if(res.status === 200){
+                    let data = await res.json()
+                    saveToSessionStorage(title, data)
+                    return data
+                }
+            }
+            catch{ return null }
     }
 
     return {

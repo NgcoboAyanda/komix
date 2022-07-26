@@ -46,6 +46,7 @@
 
 
 .results_page-content-loader-item-text{
+    width: 100%;
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
@@ -72,7 +73,7 @@
 
 
 .results_page-content-loader-item-text-title{
-    width: 300.7px;
+    width: 100%;
     color: var(--loader-bg);
     background-color: currentColor;
     text-decoration: none;

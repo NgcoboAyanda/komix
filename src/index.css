@@ -80,7 +80,7 @@ main{
 }
 
 .loader{
-    min-width: 200px;
+    min-width: 120px;
     border-radius: 2px;
     height: 30px;
     background-color: var(--bg-dark);
