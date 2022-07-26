@@ -22,7 +22,8 @@ const ResultsPage = (props)=>{
     const[data, setData] = useState({})
     const[menuVisible, setMenuVisible] = useState(false)
 
-    const[scrollPosition, setScrollPosition] = useState('0')
+    //page position
+    const[pageYOffset, setPageYOffset] = useState(JSON.parse(sessionStorage.getItem('scrollY')))
 
     let history = useHistory()
 
@@ -63,9 +64,18 @@ const ResultsPage = (props)=>{
         ()=>{
             if(data!==undefined){
                 if(data.code === 200){
+                    console.log(data)
                     setError(false)
+                    console.log('aa')
                     setLoading(false)
                     setSearchedTerm(searchTerm)
+                    //Waits for 50ms before returning to previous scroll position
+                    setTimeout(
+                        ()=>{
+                            window.scrollTo(0, pageYOffset)
+                        },
+                        50
+                    )
                 }
             }
             else{
@@ -74,19 +84,6 @@ const ResultsPage = (props)=>{
         },
         [data]
     )
-
-    /*
-    useEffect(
-        //when component mounts
-        async ()=>{
-            let params = new URLSearchParams(props.location.search)
-            let term = params.get('q')
-            setSearchTerm(term)
-            setSearchedTerm(term)
-            searchComics(term)
-        },
-        []
-    ) */
 
     const renderCurrentCategory = name => {
         /* will return 'results_page-category-selected' if name === category (state property)*/
@@ -105,8 +102,8 @@ const ResultsPage = (props)=>{
                             <img src={`${item.thumbnail.path}.jpg`} alt="" loading='lazy' />
                         </div>
                         <div className="results_page-content-data-item-text">
-                            <Link className="results_page-content-data-item-text-title" to={{
-                                pathname:`/comic/${item.id}`, state:`${item.id}`
+                            <Link className="results_page-content-data-item-text-title" to={`/comic/${item.id}`} onClick={()=>{
+                                sessionStorage.setItem('scrollY', JSON.stringify(window.scrollY))
                             }}>
                                 {item.title}
                             </Link>

@@ -21,7 +21,6 @@ const ComicPage = (props) =>{
         setLoading(true)
         let comic = await MarvelAPI.getComic(comicId)
         try{
-            console.log(comic)
             setComic(comic)
         }
         catch{}
@@ -41,7 +40,6 @@ const ComicPage = (props) =>{
 
     useEffect(
         ()=>{
-            console.log(comic)
             try{
                 setComicPrice(comic.prices[0].price)
                 setComicURL(comic.urls[0].url)
