@@ -30,6 +30,7 @@ const ResultsPage = (props)=>{
     const searchQuery = props.location.search
 
     const search = (e,term) =>{
+        setPageYOffset(0)
         history.push(`/search?q=${term}`)
         e.preventDefault()
     }
@@ -72,7 +73,9 @@ const ResultsPage = (props)=>{
                     //Waits for 50ms before returning to previous scroll position
                     setTimeout(
                         ()=>{
-                            window.scrollTo(0, pageYOffset)
+                            if(pageYOffset){
+                                window.scrollTo(0, pageYOffset)
+                            }
                         },
                         50
                     )

@@ -146,3 +146,25 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+/* Breakpoints */
+@media only screen and (min-width: 600px){
+    .results_page-content-data{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 180px);
+        grid-template-rows: auto;
+    }
+    .results_page-content-data-item{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 180px;
+    }
+    .results_page-content-data-item-thumbnail{
+        background-color: var(--bg-dark);
+        min-height: 265px;
+        height: auto;
+        width: 100%;
+    }
+}

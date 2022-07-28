@@ -106,3 +106,12 @@ main{
 .loader:not(:first-child){
     margin-top: 10px;
 }
+
+/* There are 2 width breakpoints 600px and 850px 
+@media only screen and (min-width: 600px){
+
+}
+
+@media only screen and (min-width: 850px){
+
+} */
