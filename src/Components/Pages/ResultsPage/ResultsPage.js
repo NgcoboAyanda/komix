@@ -65,9 +65,9 @@ const ResultsPage = (props)=>{
         ()=>{
             if(data!==undefined){
                 if(data.code === 200){
-                    console.log(data)
+                    //console.log(data)
                     setError(false)
-                    console.log('aa')
+                    //console.log('aa')
                     setLoading(false)
                     setSearchedTerm(searchTerm)
                     //Waits for 50ms before returning to previous scroll position
@@ -175,6 +175,9 @@ const ResultsPage = (props)=>{
                 setMenuVisible={setMenuVisible}
                 color='var(--color-primary-dark)'
             />
+            <div className="results_page-decoration">
+
+            </div>
             <form className="results_page-searchbox" onSubmit={e=>search(e, searchTerm)}>
                 <Searchbox value={searchTerm} onChange={setSearchTerm}/>
             </form>
@@ -220,8 +223,10 @@ const ResultsPage = (props)=>{
                         </span> */}
                     </p>
                 </div>
+                
                 {renderResults()}
             </div>
+            <div className="results_page-decoration"></div>
             {/*
             
             */}

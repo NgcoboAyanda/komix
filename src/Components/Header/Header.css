@@ -21,8 +21,53 @@
     height: 100%;
 }
 
+.app-header-links{
+    display: none;
+}
+
 .app-header-hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Breakpoints */
+@media only screen and (min-width: 600px){
+    .app-header-hamburger{
+        display: none;
+    }
+
+    .app-header-links{
+        display: flex;
+        list-style-type: none;
+        font-family: var(--roboto-bold);
+        font-size: var(--size-mid2);
+        color: var(--font-mid);
+    }
+
+    .app-header-links-item > a{
+        text-decoration: none;
+        color: inherit;
+        font-weight: var(--weight-big);
+        display: flex;
+        align-items: center;
+    }
+    .app-header-links-item > a > .label{
+        color: inherit;
+        margin-left: 2px;
+    }
+    .app-header-links-item > a > .icon{
+        fill: currentColor;
+    }
+
+    .app-header-links-item > a:hover{
+        color:var(--color-primary-mid);
+    }
+    .app-header-links-item > a:hover > .icon{
+        fill: var(--color-primary-mid);
+    }
+    .app-header-links-item:not(:first-child){
+        margin-left: 20px;
+    }
 }

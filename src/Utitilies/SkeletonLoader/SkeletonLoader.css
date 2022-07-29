@@ -90,3 +90,29 @@
       transform: translateX(100%);
     }
   }
+
+  @media only screen and (min-width: 600px){
+    .results_page-content-loader{
+        padding-top: 42px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 180px);
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+    }
+
+    .results_page-content-loader-item{
+        margin-top: 0 !important;
+        width: 180px;
+        height: 376px;
+        display: flex;
+        flex-direction: column;
+    }
+    .results_page-content-loader-item-thumbnail{
+        flex: 0 0 265px;
+    }
+    .results_page-content-loader-item-text{
+        padding: 15px 0;
+        flex: 1;
+    }
+}
