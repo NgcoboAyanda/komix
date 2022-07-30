@@ -101,9 +101,11 @@ const ResultsPage = (props)=>{
            return results.map(item=>{
                return (
                     <li className="results_page-content-data-item" key={item.id} id={item.id}>
-                        <div className="results_page-content-data-item-thumbnail">
-                            <img src={`${item.thumbnail.path}.jpg`} alt="" loading='lazy' />
-                        </div>
+                        <Link className="results_page-content-data-item-thumbnail" to={`/comic/${item.id}`} onClick={()=>{
+                                sessionStorage.setItem('scrollY', JSON.stringify(window.scrollY))
+                            }}>
+                                <img src={`${item.thumbnail.path}.jpg`} alt="" loading='lazy' />
+                            </Link>
                         <div className="results_page-content-data-item-text">
                             <Link className="results_page-content-data-item-text-title" to={`/comic/${item.id}`} onClick={()=>{
                                 sessionStorage.setItem('scrollY', JSON.stringify(window.scrollY))
