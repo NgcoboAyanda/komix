@@ -126,6 +126,9 @@ const ComicPage = (props) =>{
                                     <div className="creators">
                                         {renderCreators()}
                                     </div>
+                                    <div className="description">
+                                        {comic.description}
+                                    </div>
                                     <div className="link">
                                         <a href={comicURL} target="_blank">
                                             View On Marvel Website

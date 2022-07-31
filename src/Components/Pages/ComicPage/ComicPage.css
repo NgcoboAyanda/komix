@@ -314,6 +314,12 @@
         display: inline;
     }
 
+    .comic_page-information-large-data > div > .description{    
+        font-weight: var(--weight-small);
+        max-width: 490px;
+        padding: 0 var(--padding-hori-mobile);
+    }
+
     .comic_page-information-large-data > div > .link{
         flex: 1;
         display: flex;
