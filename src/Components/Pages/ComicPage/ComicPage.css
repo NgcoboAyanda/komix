@@ -168,6 +168,12 @@
     padding: var(--padding-vert-mobile) 0;
     font-weight: var(--weight-mid);
 }
+.creator-role{
+    padding-left: 5px;
+}
+.creator-role-colon{
+    display: none;
+}
 .comic_page-information-creators-data-creator:not(:last-child){
     border-bottom: 1px solid var(--font-lighter);
 }
@@ -204,4 +210,128 @@
 .comic_page-sharebtn > .share > .share-icon {
     fill: var(--font-lighter);
     margin-left: 10px;
+}
+.comic_page-information-large{
+    display: none;
+}
+
+
+/* Breakpoints */
+@media only screen and (min-width: 600px){
+    .comic_page{
+        padding-top: 0 !important;
+    }
+
+    .comic_page-content{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comic_page-content-poster{
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+    }
+    .comic_page-content-poster-small{
+        display: none;
+    }
+    .comic_page-information{
+        display: none;
+    }
+    .comic_page-sharebtn{
+        display: none;
+    }
+
+    .comic_page-information-large{
+        display: flex;
+        justify-content: center;
+    }
+    .comic_page-information-large > * {
+        background-color: rgba(0, 0, 0, 0.541);
+    }
+    .comic_page-information-large-poster{
+        padding-left: var(--padding-hori-mobile);
+        justify-content: right;
+        padding-top: 65px;
+        flex: 0 0 40%;
+        display: flex;
+        align-items: center;
+    }
+    .comic_page-information-large-poster > img {
+        max-width: 360px;
+        width: 100%;
+    }
+    .comic_page-information-large-data{
+        padding-top: 65px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        font-size: var(--size-mid);
+        color: var(--font-lighter);
+    }
+
+    .comic_page-information-large-data > * {
+        margin-bottom: 20px;
+    }
+
+    .comic_page-information-large-data > div > * {
+        margin-bottom: 20px;
+    }
+    
+    .comic_page-information-large-data > div {
+        display: flex;
+        flex-direction: column;
+        min-height: 305px;
+    }
+
+    .comic_page-information-large-data > div > .title{
+        font-size: var(--size-extreme);
+        font-family: var(--roboto-bold);
+    }
+
+    .comic_page-information-large-data > div> .creators > .comic_page-information-creators-data-creator {
+        padding: 0;
+        margin-bottom: 6px;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .creator-role{
+        font-family: var(--roboto-bold);
+        font-size: var(--size-big);
+        font-weight: var(--weight-mid);
+    }
+    .creator-name{
+        font-family: var(--roboto-bold);
+        font-weight: var(--weight-small);
+        padding-left: 5px;
+    }
+    .creator-role-colon{
+        display: inline;
+    }
+
+    .comic_page-information-large-data > div > .link{
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+    }
+    .comic_page-information-large-data > div > .link > a {
+        text-decoration: none;
+        font-size: var(--size-big);
+        color: var(--color-primary-mid);
+        border: 2px solid currentColor;
+        background: transparent;
+        font-family: var(--roboto-bold);
+        padding: 0 10px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .comic_page-information-large-data > div > .link > a:hover{
+        color: var(--color-primary);
+    }
 }

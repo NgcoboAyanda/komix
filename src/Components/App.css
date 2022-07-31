@@ -7,3 +7,13 @@
 .app-container > div {
     padding-top: 65px;
 }
+
+.app-container > .results-page{
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px){
+    .app-container > .results-page {
+        margin-top: 0;
+    }
+}

@@ -80,10 +80,10 @@ const ComicPage = (props) =>{
                     return(
                         <div className="comic_page-information-creators-data-creator" key={`creator${count}`}>
                             <span className="creator-name">
-                                    {creator.name}
-                                </span> &nbsp;&nbsp;-&nbsp;&nbsp;
+                                    {creator.name}<span className="creator-name-colon">:</span>
+                                </span>
                                  <span className="creator-role">
-                                    {capitalizeFirstLetter(creator.role)}
+                                    {capitalizeFirstLetter(creator.role)}<span className="creator-role-colon">:</span>
                                 </span>
                         </div>
                     )
@@ -113,7 +113,27 @@ const ComicPage = (props) =>{
             <>
                 <div className="comic_page-content">
                     <div className="comic_page-content-poster" style={{backgroundImage: `linear-gradient(to top, black, rgba(0,0,0,0.3)),url(${path}.${extension})`}}>
-                        <div></div>
+                        <div className="comic_page-information-large">
+                            <div className="comic_page-information-large-poster">
+                                <img src={`${path}.${extension}`} alt="" />
+                            </div>
+                            
+                            <div className="comic_page-information-large-data">
+                                <div>
+                                    <h2 className="title">
+                                        {comic.title}
+                                    </h2>
+                                    <div className="creators">
+                                        {renderCreators()}
+                                    </div>
+                                    <div className="link">
+                                        <a href={comicURL} target="_blank">
+                                            View On Marvel Website
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="comic_page-content-poster-small">
                         <img src={`${path}.${extension}`} alt="" srcSet="" />
