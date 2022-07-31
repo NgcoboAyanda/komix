@@ -229,7 +229,7 @@
     }
 
     .comic_page-content-poster{
-        flex: 1;
+        flex: 1; 
         background-position: center;
         background-size: cover;
         display: flex;
