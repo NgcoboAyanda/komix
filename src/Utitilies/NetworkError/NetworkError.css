@@ -1,6 +1,9 @@
 .network_error{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 75vh;
 }
 
 .network_error-icon{
@@ -10,16 +13,19 @@
 
 .network_error-information{
     color: var(--font-mid);
-    font-size: var(--size-normal);
+    font-size: var(--size-mid);
 }
 
 .network_error-action-btn{
+    margin-top: 10px;
+    color: var(--color-primary-mid);
+    border: 2px solid currentColor;
     cursor: pointer;
-    color: var(--font-mid);
-    text-decoration: underline;
-    font-size: var(--size-normal);
+    text-decoration: none;
+    font-size: var(--size-mid);
+    font-family: var(--roboto);
     background-color: transparent;
-    border: none;
+    padding: 5px 10px;
 }
 .network_error-action-btn:hover{
     color: var(--color-primary) ;

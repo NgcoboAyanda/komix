@@ -24,6 +24,7 @@
 
 /* results_page-searchbox */
 .results_page-searchbox{
+    margin-top: 20px;
     position: relative;
     max-width: 800px;
     height: 50px;
@@ -169,6 +170,10 @@ body{
 
 /* Breakpoints */
 @media only screen and (min-width: 600px){
+    .results_page-searchbox{
+        margin-top: 0;
+    }
+
     .results_page-decoration{
         display: block;
     }
