@@ -279,7 +279,7 @@
     }
 
     .comic_page-information-large-data > div > * {
-        margin-bottom: 20px;
+       
     }
     
     .comic_page-information-large-data > div {
@@ -302,16 +302,22 @@
     }
     .creator-role{
         font-family: var(--roboto-bold);
-        font-size: var(--size-big);
+        font-size: var(--size-mid);
         font-weight: var(--weight-mid);
     }
     .creator-name{
+        font-size: var(--size-mid);
         font-family: var(--roboto-bold);
         font-weight: var(--weight-small);
         padding-left: 5px;
     }
     .creator-role-colon{
         display: inline;
+    }
+
+    .comic_page-information-large-data > div > .creators{
+        display: inline;
+        width: 200px;
     }
 
     .comic_page-information-large-data > div > .description{    
