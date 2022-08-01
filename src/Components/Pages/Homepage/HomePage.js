@@ -27,7 +27,7 @@ const HomePage = ()=>{
     return(
         <main className="app-homepage">
             <SideMenu visible={menuVisible} toggleVisible={toggleMenuVisibility} />
-            <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} color='var(--color-primary)'/> 
+            <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} color='var(--color-primary-mid)'/> 
             <form className="home_searchbox-container" onSubmit={() =>search()}>
                 <Searchbox value={searchTerm} onChange={setSearchTerm}/>
             </form>

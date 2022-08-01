@@ -1,7 +1,7 @@
 .app-header{
     position: fixed; /*because the side menu will be position:absolute*/
     background-color: white;
-    z-index: 100;
+    z-index: 2;
     height: 65px;
     width: 100%;
     display: flex;
