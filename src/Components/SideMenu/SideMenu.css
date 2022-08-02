@@ -7,7 +7,7 @@
     height: 100vh;
     display: flex;
     z-index: 10;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
     transition: all 0.2s linear;
 }
@@ -45,9 +45,11 @@
 
 .side_menu-link-container{
     /* container for side_menu-link(s) */
+    margin-top: 20px;
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-bottom: auto;
 }
 
 .side_menu-link{

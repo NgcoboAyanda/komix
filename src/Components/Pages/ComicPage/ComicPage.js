@@ -123,7 +123,7 @@ const ComicPage = (props) =>{
                                     <h2 className="title">
                                         {comic.title}
                                     </h2>
-                                    <div className="creators">
+                                    <div className="creators creators-grid">
                                         {renderCreators()}
                                     </div>
                                     <div className="description">
@@ -211,8 +211,32 @@ const ComicPage = (props) =>{
         return(
             <>
                 <div className="comic_page-content">
-                    <div className="comic_page-content-poster" style={{backgroundImage:'var(--bg-main)'}}>
-                        <div></div>
+                    <div className="comic_page-content-poster grad-to-top">
+                        <div className="comic_page-information-large">
+                                <div className="comic_page-information-large-poster">
+                                    <div className="loader"></div>
+                                </div>
+                                
+                                <div className="comic_page-information-large-data">
+                                    <div>
+                                        <div className="loader"></div>
+                                        <div className="creators creators-loader">
+                                            <div className="loader"></div>
+                                            <div className="loader loader-shorter"></div>
+                                            <div className="loader loader-shorter"></div>
+                                            <div className="loader"></div>
+                                        </div>
+                                        <div className="description">
+                                            
+                                        </div>
+                                        <div className="link link-loader">
+                                            <a href="#">
+                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <div className="comic_page-content-poster-small">
                         <img  alt="" srcset="" />
