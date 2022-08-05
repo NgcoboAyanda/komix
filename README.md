@@ -5,12 +5,13 @@
 A Marvel comic search engine built with Reactjs.
 
 ## Technologies ##
-Project is created with:
+__Project is created with:__
 * HTML5
 * CSS3
 * Javascript (Reactjs)
 
 ## Features ##
-You can:
-* Search for any Marvel comic
-* Get information on any existing Marvel comic
+__You can:__
+* Browse Marvel comics
+* Search for any existing Marvel comic
+* Get creator information on any existing Marvel comic
