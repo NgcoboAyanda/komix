@@ -17,4 +17,4 @@ __You can:__
 * Get creator information on any existing Marvel comic
 
 ## Other Info ##
-The project is hosted on Github pages. You can view it  at [Named Link](https://ngcoboayanda.github.io/komix/)
+The project is hosted on Github pages. You can view it [here](https://ngcoboayanda.github.io/komix/).
