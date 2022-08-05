@@ -4,6 +4,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 /* padding: 0 15px; */
@@ -214,6 +215,43 @@
 .comic_page-information-large{
     display: none;
 }
+
+.comic_page-copy-link-btn{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comic_page-copy-link-btn > button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background-color: var(--color-primary-mid);
+}
+
+.comic_page-copy-link-btn > button > .button-label{
+    top: -30px;
+    right: 0;
+    position: absolute;
+    font-size: var(--size-normal);
+    width: 108px;
+    color: var(--color-primary-mid);
+}
+
+.comic_page-copy-link-btn > button > .button-icon{
+    color: var(--font-lighter);
+}
+.comic_page-copy-link-btn > button > .button-icon > svg {
+    fill: currentColor;
+}
+
+
 
 
 /* Breakpoints */
