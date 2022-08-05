@@ -1,0 +1,52 @@
+.copy-link-btn{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy-link-btn > button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--color-primary-mid);
+    background-color: currentColor;
+    transition: 0.05s all ease-in-out;
+}
+.copy-link-btn > button:hover{
+    color: var(--color-primary);
+}
+.copy-link-btn > button:active{
+    transform: scale(0.94);
+}
+
+
+.copy-link-btn > button > .button-currentpage{
+    
+}
+
+.copy-link-btn > button > .button-icon{
+    color: inherit;
+}
+
+.copy-link-btn > button > .button-label{
+    top: -24px;
+    right: -20px;
+    position: absolute;
+    font-size: var(--size-normal);
+    width: 108px;
+    color: inherit;
+}
+
+.copy-link-btn > button > .button-icon{
+    color: var(--font-lighter);
+}
+.copy-link-btn > button > .button-icon > svg {
+    fill: currentColor;
+}

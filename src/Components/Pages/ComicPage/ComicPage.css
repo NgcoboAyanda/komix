@@ -232,16 +232,29 @@
     height: 60px;
     width: 60px;
     border-radius: 100px;
-    background-color: var(--color-primary-mid);
+    cursor: pointer;
+    color: var(--color-primary-mid);
+    background-color: currentColor;
+    transition: 0.05s all ease-in-out;
+}
+.comic_page-copy-link-btn > button:hover{
+    color: var(--color-primary);
+}
+.comic_page-copy-link-btn > button:active{
+    transform: scale(0.94);
+}
+
+.comic_page-copy-link-btn > button > .button-icon{
+    color: inherit;
 }
 
 .comic_page-copy-link-btn > button > .button-label{
-    top: -30px;
-    right: 0;
+    top: -24px;
+    right: -20px;
     position: absolute;
     font-size: var(--size-normal);
     width: 108px;
-    color: var(--color-primary-mid);
+    color: inherit;
 }
 
 .comic_page-copy-link-btn > button > .button-icon{
@@ -306,7 +319,7 @@
     }
     .comic_page-information-large-poster > img {
         min-height: 400px;
-        background-color: green;
+        background-color: var(--bg-dark);
         max-width: 360px;
         width: 100%;
     }
