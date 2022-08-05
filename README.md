@@ -1,13 +1,16 @@
-# Komix - Marvel Comic Search Engine
+# Komix - Marvel Comic Search Engine #
 
 
-## Introduction
-A marvel comic search engine built with Reactjs.
+## Introduction ##
+A Marvel comic search engine built with Reactjs.
 
-## Technologies
+## Technologies ##
 Project is created with:
 * HTML5
 * CSS3
 * Javascript (Reactjs)
 
-
+## Features ##
+You can:
+* Search for any Marvel comic
+* Get information on any existing Marvel comic
