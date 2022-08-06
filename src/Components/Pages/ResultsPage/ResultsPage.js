@@ -10,6 +10,7 @@ import SkeletonLoader from '../../../Utitilies/SkeletonLoader/SkeletonLoader'
 import Header from '../../Header/Header'
 import SideMenu from '../../SideMenu/SideMenu'
 import NetworkError from '../../../Utitilies/NetworkError/NetworkError'
+import NotFound from '../../../Utitilies/NotFound/NotFound'
 
 
 /* Results Page component */
@@ -65,9 +66,8 @@ const ResultsPage = (props)=>{
         ()=>{
             if(data!==undefined){
                 if(data.code === 200){
-                    //console.log(data)
+                    //if the request was successful
                     setError(false)
-                    //console.log('aa')
                     setLoading(false)
                     setSearchedTerm(searchTerm)
                     //Waits for 50ms before returning to previous scroll position
@@ -96,10 +96,10 @@ const ResultsPage = (props)=>{
 
     const renderData = ()=> {
         /* renders the comics */
-       const {data:{results}} = data
-       let mapResults = ()=>{
-           return results.map(item=>{
-               return (
+        const {data:{results}} = data
+        let mapResults = ()=>{
+            return results.map(item=>{
+                return (
                     <li className="results_page-content-data-item" key={item.id} id={item.id}>
                         <Link className="results_page-content-data-item-thumbnail" to={`/comic/${item.id}`} onClick={()=>{
                                 sessionStorage.setItem('scrollY', JSON.stringify(window.scrollY))
@@ -117,14 +117,23 @@ const ResultsPage = (props)=>{
                             </span>
                         </div> 
                     </li>
-               )
-           })
-       }
-       return (
-           <div className="results_page-content-data">
-               {mapResults()}
-           </div>
-       )
+                )
+            })
+        }
+        if(results[0]){
+            return (
+                <div className="results_page-content-data">
+                    {mapResults()}
+                </div>
+            )
+        }
+        else {
+            return(
+                <div className="results_page-content-data results_page-content-data-not-found">
+                    <NotFound searchedTerm={searchedTerm}/>
+                </div>
+            ) 
+        }
     }
 
     const renderLoaders=()=>{

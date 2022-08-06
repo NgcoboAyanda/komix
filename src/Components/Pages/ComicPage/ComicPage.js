@@ -306,7 +306,7 @@ const ComicPage = (props) =>{
             />
 
             {renderPage()}
-            <CopyLinkBtn/>
+            <CopyLinkBtn loading={loading}/>
         </div>
     )
 }
