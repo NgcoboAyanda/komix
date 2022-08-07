@@ -118,6 +118,7 @@
     text-decoration: none;
     display:block;
     width: 100%;
+    min-height: 46px;
     height: 100%;
     font-size: var(--size-mid);
     color: var(--font-lighter);
@@ -271,6 +272,10 @@
 @media only screen and (min-width: 600px){
     .comic_page{
         padding-top: 0 !important;
+    }
+
+    .comic_page > .copy-link-btn{
+        display: flex;
     }
 
     .comic_page-content{
@@ -452,3 +457,4 @@
         color: var(--color-primary);
     }
 }
+

@@ -1,0 +1,27 @@
+.mobile-copylinkbtn{
+    background-color: var(--color-primary-mid);
+    color: var(--font-lighter);
+    min-height: 46px;
+    width: 100%;
+    font-family: var(--roboto);
+    font-size: var(--size-mid);
+    font-weight: var(--weight-big);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.05s ease-in-out;
+}
+.mobile-copylinkbtn:active{
+    background-color: var(--color-primary);
+}
+
+
+.mobile-copylinkbtn > .icon{
+    padding: 0 5px;
+    color: currentColor;
+}
+
+.mobile-copylinkbtn > .icon > svg {
+    fill: currentColor;
+}
