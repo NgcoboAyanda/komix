@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/komix/static/css/main.2c30b993.chunk.css",
-    "main.js": "/komix/static/js/main.362b96c3.chunk.js",
-    "main.js.map": "/komix/static/js/main.362b96c3.chunk.js.map",
+    "main.css": "/komix/static/css/main.596abdd4.chunk.css",
+    "main.js": "/komix/static/js/main.015c6219.chunk.js",
+    "main.js.map": "/komix/static/js/main.015c6219.chunk.js.map",
     "runtime-main.js": "/komix/static/js/runtime-main.75ad6450.js",
     "runtime-main.js.map": "/komix/static/js/runtime-main.75ad6450.js.map",
-    "static/js/2.e9004d27.chunk.js": "/komix/static/js/2.e9004d27.chunk.js",
-    "static/js/2.e9004d27.chunk.js.map": "/komix/static/js/2.e9004d27.chunk.js.map",
+    "static/js/2.fad27892.chunk.js": "/komix/static/js/2.fad27892.chunk.js",
+    "static/js/2.fad27892.chunk.js.map": "/komix/static/js/2.fad27892.chunk.js.map",
     "index.html": "/komix/index.html",
-    "static/css/main.2c30b993.chunk.css.map": "/komix/static/css/main.2c30b993.chunk.css.map",
-    "static/js/2.e9004d27.chunk.js.LICENSE.txt": "/komix/static/js/2.e9004d27.chunk.js.LICENSE.txt",
+    "static/css/main.596abdd4.chunk.css.map": "/komix/static/css/main.596abdd4.chunk.css.map",
+    "static/js/2.fad27892.chunk.js.LICENSE.txt": "/komix/static/js/2.fad27892.chunk.js.LICENSE.txt",
     "static/media/404.249bbed0.svg": "/komix/static/media/404.249bbed0.svg",
     "static/media/index.css": "/komix/static/media/background.1920d37a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.75ad6450.js",
-    "static/js/2.e9004d27.chunk.js",
-    "static/css/main.2c30b993.chunk.css",
-    "static/js/main.362b96c3.chunk.js"
+    "static/js/2.fad27892.chunk.js",
+    "static/css/main.596abdd4.chunk.css",
+    "static/js/main.015c6219.chunk.js"
   ]
 }
