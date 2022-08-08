@@ -304,15 +304,20 @@
         display: none;
     }
 
+    .comic_page-content-poster{
+        display: flex;
+        justify-content: center;
+    }
+
     .comic_page-information-large{
         min-width: 500px;
         min-height: 500px;
-        background-color: red;
+        max-width: 800px;
         display: flex;
         justify-content: center;
     }
     .comic_page-information-large > * {
-        background-color: rgba(0, 0, 0, 0.541);
+        
     }
     .comic_page-information-large-poster{
         padding-left: var(--padding-hori-mobile);

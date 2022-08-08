@@ -4,6 +4,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .results_page > * {
     padding: 0 5px;
@@ -24,9 +25,11 @@
 
 /* results_page-searchbox */
 .results_page-searchbox{
+    padding: 0;
     margin-top: 20px;
     position: relative;
-    max-width: 800px;
+    width: 100%;
+    max-width: 870px;
     height: 50px;
     font-size: var(--size-normal);
     color:var(--font-mid);
@@ -34,6 +37,7 @@
 
 /* the categories e.g comics, creators etc */
 .results_page-categories{
+    width: 100%;
     box-shadow: none;
     padding-top:20px;
     /*padding-bottom: 5px;*/
@@ -41,6 +45,7 @@
     list-style-type: none;
     padding-left: 20px;
     border-bottom: 1px solid var(--font-lighter);
+    max-width: 900px;
 }
 .results_page-category{
     color: var(--font-light);
@@ -72,6 +77,8 @@
     display: flex;
     flex-direction: column;
     background: var(--bg-main);
+    width: 100%;
+    max-width: 900px;
 }
 .results_page-content-searched-term{
     margin-top: 5px;

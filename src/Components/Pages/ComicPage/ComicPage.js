@@ -115,7 +115,7 @@ const ComicPage = (props) =>{
         return(
             <>
                 <div className="comic_page-content">
-                    <div className="comic_page-content-poster" style={{backgroundImage: `linear-gradient(to top, black, rgba(0,0,0,0.3)),url(${path}.${extension})`}}>
+                    <div className="comic_page-content-poster" style={{backgroundImage: `linear-gradient(to top, black, rgba(0, 0, 0, 0.42)),url(${path}.${extension})`}}>
                         <div className="comic_page-information-large">
                             <div className="comic_page-information-large-poster">
                                 <img src={`${path}.${extension}`} alt="" />
