@@ -146,6 +146,13 @@ const ResultsPage = (props)=>{
                 <SkeletonLoader/>
                 <SkeletonLoader/>
                 <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
+                <SkeletonLoader/>
             </div>
         )
     }
