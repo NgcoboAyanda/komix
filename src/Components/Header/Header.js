@@ -7,6 +7,7 @@ import logo from '../../Utitilies/logo.png'//Komix logo
 import MenuButton from '../../Utitilies/MenuButton/MenuButton'
 import HomePage from '../Pages/Homepage/HomePage'
 import { Link } from 'react-router-dom'
+import Searchbox from '../../Utitilies/Searchbox/Searchbox'
 
 
 const debounce = (func, wait, immediate)=> {
@@ -25,11 +26,12 @@ const debounce = (func, wait, immediate)=> {
 };
 
 
-const Header = ({menuVisible, setMenuVisible, color='white'})=>{
+const Header = ({menuVisible, setMenuVisible, color='white', searchboxVisible=false})=>{
     //if menuVisible is true then sidemenu will be visible/ if false side menu will be hidden}
     //scroll
     const[prevScrollPos, setPrevScrollPos] = useState(0)
     const[headerVisible, setHeaderVisible] = useState(true)
+    const[searchboxValue, setSearchboxValue] = useState('')
     
     const handleScroll = debounce (() => {
         const currentScrollPos = window.pageYOffset
@@ -45,6 +47,19 @@ const Header = ({menuVisible, setMenuVisible, color='white'})=>{
         [prevScrollPos, headerVisible, handleScroll]
     ) 
     
+    const renderSearchbox = () => {
+        if (searchboxVisible){
+            return (
+                <>
+                    <li className="app-header-links-item header-searchbox">
+                        <Searchbox value={searchboxValue} onChange={setSearchboxValue}/>
+                    </li>
+                </>
+            )
+        }
+        else return null
+    }
+
     return(
         <header className="app-header" style={{top: headerVisible?'0':'-65px'}}>
             <div>
@@ -58,6 +73,7 @@ const Header = ({menuVisible, setMenuVisible, color='white'})=>{
                 </div>
                 
                 <ul className="app-header-links">
+                    {renderSearchbox()}
                     <li className="app-header-links-item">
                         <a href="https://github.com/NgcoboAyanda/komix" target="_blank" className="app-header-links-item-link">
                             <span className="icon">

@@ -287,6 +287,7 @@ const ComicPage = (props) =>{
             <Header
                 menuVisible={menuVisible}
                 setMenuVisible={setMenuVisible}
+                searchboxVisible={true}
                 color='var(--color-primary-dark)'
             />
 

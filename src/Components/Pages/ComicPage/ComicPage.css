@@ -308,6 +308,9 @@
         display: flex;
         justify-content: center;
     }
+    .comic_page-content-poster > div {
+        background-color: transparent;
+    }
 
     .comic_page-information-large{
         min-width: 500px;
