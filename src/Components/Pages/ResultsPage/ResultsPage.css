@@ -19,8 +19,8 @@
     display: none;
     width: 100%;
     height: 60px;
-    clip-path: polygon(100% 0, 95% 100%, 0 100%, 0 0);
     background-color: var(--color-primary-mid);
+    margin-bottom: 20px;
 }
 
 /* results_page-searchbox */
