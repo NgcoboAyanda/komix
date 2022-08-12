@@ -6,7 +6,7 @@ import logo from '../../Utitilies/logo.png'//Komix logo
 //Components
 import MenuButton from '../../Utitilies/MenuButton/MenuButton'
 import HomePage from '../Pages/Homepage/HomePage'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Searchbox from '../../Utitilies/Searchbox/Searchbox'
 
 
@@ -51,13 +51,20 @@ const Header = ({menuVisible, setMenuVisible, color='white', searchboxVisible=fa
         if (searchboxVisible){
             return (
                 <>
-                    <li className="app-header-links-item header-searchbox">
+                    <form className="app-header-links-item header-searchbox" onSubmit={()=>search()}>
                         <Searchbox value={searchboxValue} onChange={setSearchboxValue}/>
-                    </li>
+                    </form>
                 </>
             )
         }
         else return null
+    }
+    const history = useHistory()
+
+    const search = () =>{
+        if(searchboxValue){
+            history.push(`/search?q=${searchboxValue}`)
+        }
     }
 
     return(
