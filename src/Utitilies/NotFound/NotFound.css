@@ -1,5 +1,8 @@
 .results_page-content-data-not-found{
     display: flex;
+    min-height: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 5px rgb(223, 223, 223);
 }
 
 .not-found{

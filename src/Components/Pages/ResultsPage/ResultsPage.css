@@ -79,6 +79,7 @@
     background: var(--bg-main);
     width: 100%;
     max-width: 900px;
+    margin-bottom: 20px;
 }
 .results_page-content-searched-term{
     margin-top: 5px;

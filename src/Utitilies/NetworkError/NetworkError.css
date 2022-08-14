@@ -33,7 +33,16 @@
 
 /* Breakpoints */
 @media only screen and (min-width: 600px){
-    .network_error{
-        background-color: red;
+    .network_error-icon{
+        width: 500px;
+        height: 400px;
+    }
+
+    .network_error-information{
+        font-size: var(--size-big);
+    }
+
+    .network_error-action-btn{
+        font-size: var(--size-big);
     }
 }
